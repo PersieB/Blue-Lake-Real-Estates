@@ -1,0 +1,34 @@
+.requests{
+    font-family: courier;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.bubble{
+    background: rgb(226, 101, 101);
+    color: #fff;
+    padding: 0.5em 1em;
+    position: relative;
+    border-radius: 0 0.25em 0.25em 0.25em;
+    box-shadow: 7px 30px 40px #664400;
+    transition: 0.5s;
+    animation: speech .7s linear 1;
+}
+.bubble::after{
+    content: '';
+    position: absolute;
+    border: 0.5em solid transparent;
+    border-top-color: rgb(226, 101, 101);
+    border-right-color: rgb(226, 101, 101);
+    right: 100%;
+    top: 0%;
+    transform: skewY(20deg);
+    transform-origin: 100% 100%;
+}
+@keyframes speech{
+    0% {top:-20px;}
+    25% {top:5px; box-shadow: 7px 40px 40px #664400;}
+    50% {top:20px;}
+    75% {top:-20px; box-shadow: 7px -10px 50px #664400;}
+    100% {top: 0;}
+}
